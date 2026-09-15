@@ -1,0 +1,20 @@
+{
+  "name": "audio-summary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sito per caricare un audio di lezione e ottenere un riassunto per punti generato da Gemini AI",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/genai": "^2.22.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.4.0"
+  }
+}

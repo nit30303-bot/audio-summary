@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riassunto Lezioni AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="login-screen" class="login-screen">
+    <div class="login-card">
+      <h1>🔒 Accesso riservato</h1>
+      <p>Inserisci la password per accedere a Riassunto Lezioni AI.</p>
+      <input type="password" id="login-password" class="login-input" placeholder="Password" autocomplete="current-password" />
+      <button id="login-btn" type="button" class="btn btn-primary">Entra</button>
+      <p id="login-error" class="login-error" hidden></p>
+    </div>
+  </section>
+
+  <main class="page" id="app" hidden>
+    <header class="header">
+      <h1>🎧 Riassunto Lezioni AI</h1>
+      <p>Carica l'audio di una lezione (anche 1h+) e ricevi un riassunto per punti, pronto per il ripasso.</p>
+    </header>
+
+    <section id="drop-area" class="drop-area">
+      <input type="file" id="file-input" accept="audio/*" hidden />
+      <div class="drop-content">
+        <p class="drop-icon">📁</p>
+        <p><strong>Trascina qui il file audio</strong> oppure</p>
+        <button id="browse-btn" type="button" class="btn btn-secondary">Scegli file</button>
+        <p id="file-name" class="file-name"></p>
+      </div>
+    </section>
+
+    <button id="submit-btn" type="button" class="btn btn-primary" disabled>Carica e riassumi</button>
+
+    <section id="status" class="status" hidden></section>
+
+    <section id="result-section" class="result-section" hidden>
+      <div class="result-actions">
+        <button id="copy-btn" type="button" class="btn btn-secondary">📋 Copia</button>
+        <button id="download-btn" type="button" class="btn btn-secondary">⬇️ Scarica .txt</button>
+      </div>
+      <div id="result" class="result"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
